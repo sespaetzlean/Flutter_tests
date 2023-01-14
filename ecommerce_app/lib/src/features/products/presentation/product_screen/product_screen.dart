@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/src/common_widgets/async_value_widget.dart';
 import 'package:ecommerce_app/src/common_widgets/error_message_widget.dart';
-import 'package:ecommerce_app/src/features/cart/presentation/add_to_cart/add_to_cart_widget.dart';
 import 'package:ecommerce_app/src/features/products/data/fake_products_repository.dart';
 import 'package:ecommerce_app/src/features/products/presentation/home_app_bar/home_app_bar.dart';
 import 'package:ecommerce_app/src/features/products/presentation/product_screen/leave_review_action.dart';
@@ -137,7 +136,6 @@ class ProductDetails extends StatelessWidget {
               LeaveReviewAction(productId: product.id),
               const Divider(),
               gapH8,
-              AddToCartWidget(product: product),
             ],
           ),
         ),

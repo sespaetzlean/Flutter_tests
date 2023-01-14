@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/src/constants/breakpoints.dart';
 import 'package:ecommerce_app/src/features/products/presentation/home_app_bar/more_menu_button.dart';
-import 'package:ecommerce_app/src/features/products/presentation/home_app_bar/shopping_cart_icon.dart';
 import 'package:ecommerce_app/src/localization/string_hardcoded.dart';
 import 'package:ecommerce_app/src/features/authentication/domain/app_user.dart';
 import 'package:ecommerce_app/src/routing/app_router.dart';
@@ -31,33 +30,31 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     if (screenWidth < Breakpoint.tablet) {
       return AppBar(
-        title: Text('My Shop'.hardcoded),
+        title: Text('My Tests small'.hardcoded),
         actions: const [
-          ShoppingCartIcon(),
           MoreMenuButton(user: user),
         ],
       );
     } else {
       return AppBar(
-        title: Text('My Shop'.hardcoded),
+        title: Text('My Tests extended'.hardcoded),
         actions: [
-          const ShoppingCartIcon(),
           if (user != null) ...[
             ActionTextButton(
               key: MoreMenuButton.ordersKey,
               text: 'Orders'.hardcoded,
-              onPressed: () => context.pushNamed(AppRoute.orders.name),
+              onPressed: () => context.pushNamed(AppRoute.home.name),
             ),
             ActionTextButton(
               key: MoreMenuButton.accountKey,
               text: 'Account'.hardcoded,
-              onPressed: () => context.pushNamed(AppRoute.account.name),
+              onPressed: () => context.pushNamed(AppRoute.home.name),
             ),
           ] else
             ActionTextButton(
               key: MoreMenuButton.signInKey,
               text: 'Sign In'.hardcoded,
-              onPressed: () => context.pushNamed(AppRoute.signIn.name),
+              onPressed: () => context.pushNamed(AppRoute.home.name),
             )
         ],
       );

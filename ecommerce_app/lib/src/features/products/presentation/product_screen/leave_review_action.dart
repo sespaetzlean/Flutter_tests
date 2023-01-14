@@ -1,4 +1,3 @@
-import 'package:ecommerce_app/src/features/orders/domain/purchase.dart';
 import 'package:ecommerce_app/src/localization/string_hardcoded.dart';
 import 'package:ecommerce_app/src/routing/app_router.dart';
 import 'package:ecommerce_app/src/utils/date_formatter.dart';
@@ -17,7 +16,7 @@ class LeaveReviewAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: Read from data source
-    final purchase = Purchase(orderId: 'abc', orderDate: DateTime.now());
+    final purchase = null;
     if (purchase != null) {
       // TODO: Inject date formatter
       final dateFormatted = kDateFormatter.format(purchase.orderDate);
