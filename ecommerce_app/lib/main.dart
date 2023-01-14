@@ -14,6 +14,7 @@ void main() async {
   // * https://docs.flutter.dev/testing/errors
   registerErrorHandlers();
   // * Entry point of the app
+  //exp: provider scope for riverpod
   runApp(const ProviderScope(
     child: MyApp(),
   ));
@@ -35,7 +36,9 @@ void registerErrorHandlers() {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text('An error occurred'.hardcoded),
+        title: Text('''An error occurred, 
+            probably because a widget failed to build'''
+            .hardcoded),
       ),
       body: Center(child: Text(details.toString())),
     );

@@ -7,25 +7,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //exp: #.router implements the goRouter functionality
     return MaterialApp.router(
       routerConfig: goRouter,
       debugShowCheckedModeBanner: false,
       restorationScopeId: 'app',
-      onGenerateTitle: (BuildContext context) => 'My Shop'.hardcoded,
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black87,
-          foregroundColor: Colors.white,
-          elevation: 0,
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black, // background (button) color
-            foregroundColor: Colors.white, // foreground (text) color
-          ),
-        ),
-      ),
+      onGenerateTitle: (BuildContext context) => 'Tests'.hardcoded, //tab-title
     );
   }
 }
