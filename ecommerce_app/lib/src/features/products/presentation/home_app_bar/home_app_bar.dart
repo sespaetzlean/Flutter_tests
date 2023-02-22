@@ -52,8 +52,8 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
           ] else
             ActionTextButton(
               key: MoreMenuButton.signInKey,
-              text: 'Sign In'.hardcoded,
-              onPressed: () => context.pushNamed(AppRoute.home.name),
+              text: 'Sort t'.hardcoded,
+              onPressed: () => context.goNamed(AppRoute.changeFilter.name),
             )
         ],
       );

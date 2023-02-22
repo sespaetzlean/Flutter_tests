@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/src/features/sortDropdown/sortDropdown_screen.dart';
 import 'package:ecommerce_app/src/features/products/presentation/product_screen/product_screen.dart';
 import 'package:ecommerce_app/src/features/products/presentation/products_list/products_list_screen.dart';
 import 'package:ecommerce_app/src/features/reviews/presentation/leave_review_screen/leave_review_screen.dart';
@@ -9,6 +10,7 @@ enum AppRoute {
   home,
   product,
   leaveReview,
+  changeFilter,
 }
 
 final goRouter = GoRouter(
@@ -42,6 +44,11 @@ final goRouter = GoRouter(
             ),
           ],
         ),
+        GoRoute(
+          path: 'filterDropdown',
+          name: AppRoute.changeFilter.name,
+          builder: (context, state) => const MySortPage(),
+        )
       ],
     ),
   ],
